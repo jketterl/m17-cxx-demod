@@ -1,0 +1,20 @@
+Source: m17-cxx-demod
+Maintainer: Jakob Ketterl <jakob.ketterl@gmx.de>
+Section: hamradio
+Priority: optional
+Standards-Version: 4.2.0
+Build-Depends: debhelper (>= 11), cmake (>= 3.9), pkg-config, libcodec2-dev, libboost-program-options-dev
+Vcs-Browser: https://github.com/jketterl/m17-cxx-demod
+Vcs-Git: https://github.com/jketterl/m17-cxx-demod.git
+
+Package: m17-demod
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: M17 Demodulator
+ Simple demodulator that can decode M17 from an FM audio stream
+
+Package: m17-mod
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: M17 Modulator
+ Simple modulator that outputs either bitstream or audio for FM modulation
